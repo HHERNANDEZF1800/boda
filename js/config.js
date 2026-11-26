@@ -7,7 +7,7 @@ window.BODA = {
   novios: {
     el: "Héctor",
     ella: "Xoch",      // TODO: nombre de tu novia
-    iniciales: "H & N",
+    iniciales: "H & X",
   },
 
   // Fecha y hora de la ceremonia (formato ISO, hora local)
@@ -98,7 +98,7 @@ window.BODA = {
      Mientras esté vacío, la página funciona en MODO DEMO con los códigos
      de abajo y guarda las respuestas sólo en este navegador. */
   rsvpEndpoint: "",
-  fechaLimiteRsvp: "1 de mayo de 2027",
+  fechaLimiteRsvp: "23 de enero de 2027",
   maxExtras: 4, // máximo de personas adicionales que se pueden solicitar
 
   demoInvitados: {
