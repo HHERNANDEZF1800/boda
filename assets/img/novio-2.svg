@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><filter id="w"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="21"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="g"><feTurbulence baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0"/></filter></defs>
+<rect width="800" height="1000" fill="#F7F0E6"/><g filter="url(#w)"><circle cx="168" cy="428" r="336" fill="#C8892A" opacity="0.42"/><circle cx="490" cy="863" r="215" fill="#C8892A" opacity="0.48"/><circle cx="524" cy="187" r="289" fill="#F7F0E6" opacity="0.48"/><circle cx="14" cy="379" r="309" fill="#C8892A" opacity="0.22"/><circle cx="769" cy="237" r="219" fill="#8FA58A" opacity="0.35"/><circle cx="756" cy="789" r="264" fill="#C8892A" opacity="0.21"/><circle cx="336" cy="553" r="287" fill="#8FA58A" opacity="0.43"/><circle cx="377" cy="23" r="199" fill="#8FA58A" opacity="0.24"/></g><rect width="800" height="1000" filter="url(#g)"/>
+<g fill="none" stroke="#F7F0E6" stroke-width="3" opacity=".85" transform="translate(400 470)">
+<path d="M-60-40h120a14 14 0 0 1 14 14v80a14 14 0 0 1-14 14h-120a14 14 0 0 1-14-14v-80a14 14 0 0 1 14-14z"/><circle r="30" cy="14"/><path d="M-26-40l10-18h32l10 18"/></g>
+<text x="400" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#F7F0E6" font-style="italic">Héctor · foto 2</text>
+<text x="400" y="630" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" letter-spacing="6" fill="#F7F0E6" opacity=".8">FOTO DE EJEMPLO</text></svg>

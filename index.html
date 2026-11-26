@@ -37,13 +37,25 @@
   <div id="gate" role="dialog" aria-label="Bienvenida">
     <div class="gate-curtain left"></div>
     <div class="gate-curtain right"></div>
+    <img class="gate-flor tl" src="assets/img/flores-esquina.svg" alt="" />
+    <img class="gate-flor br" src="assets/img/flores-esquina-2.svg" alt="" />
+    <img class="gate-flor tr" src="assets/img/flores-ramita.svg" alt="" />
+    <img class="gate-flor bl" src="assets/img/flores-ramita.svg" alt="" />
     <div class="gate-inner">
-      <svg class="gate-sprig"><use href="#sprig"/></svg>
-      <p class="eyebrow">Nos casamos</p>
-      <h1 class="gate-names" data-bind="nombres"></h1>
-      <p class="gate-date" data-bind="fechaTexto"></p>
-      <button id="enterBtn" class="btn btn-primary">Entrar</button>
-      <p class="gate-note">♪ Esta página tiene música. Sube el volumen.</p>
+      <div class="arch gate-arch">
+        <img data-bind-src="portada" alt="Foto de los novios" />
+        <img class="arch-flor" src="assets/img/flores-guirnalda.svg" alt="" />
+      </div>
+      <div class="gate-text">
+        <p class="eyebrow">Estás invitado a nuestra boda</p>
+        <h1 class="gate-names" data-bind="nombresHtml"></h1>
+        <p class="gate-date" data-bind="fechaTexto"></p>
+        <button id="enterBtn" class="seal" aria-label="Entrar">
+          <span class="seal-wax"><span class="seal-ini" data-bind="iniciales"></span></span>
+          <span class="seal-label">Abrir invitación</span>
+        </button>
+        <p class="gate-note">♪ Esta página tiene música · sube el volumen</p>
+      </div>
     </div>
   </div>
 
@@ -51,12 +63,13 @@
   <nav id="nav" aria-label="Secciones">
     <a class="nav-brand" href="#inicio" data-goto="inicio" data-bind="iniciales"></a>
     <ul class="nav-list">
-      <li><a href="#historia" data-goto="historia"><span>01</span>Historia</a></li>
-      <li><a href="#familia" data-goto="familia"><span>02</span>Familia</a></li>
-      <li><a href="#dia" data-goto="dia"><span>03</span>El gran día</a></li>
-      <li><a href="#vestimenta" data-goto="vestimenta"><span>04</span>Vestimenta</a></li>
-      <li><a href="#galeria" data-goto="galeria"><span>05</span>Galería</a></li>
-      <li><a href="#rsvp" data-goto="rsvp"><span>06</span>Confirmar</a></li>
+      <li><a href="#novios" data-goto="novios"><span>01</span>Los novios</a></li>
+      <li><a href="#historia" data-goto="historia"><span>02</span>Historia</a></li>
+      <li><a href="#familia" data-goto="familia"><span>03</span>Familia</a></li>
+      <li><a href="#dia" data-goto="dia"><span>04</span>El gran día</a></li>
+      <li><a href="#vestimenta" data-goto="vestimenta"><span>05</span>Vestimenta</a></li>
+      <li><a href="#galeria" data-goto="galeria"><span>06</span>Galería</a></li>
+      <li><a href="#rsvp" data-goto="rsvp"><span>07</span>Confirmar</a></li>
     </ul>
     <div class="nav-controls">
       <div class="ctrl">
@@ -87,9 +100,20 @@
 
         <!-- PORTADA -->
         <section id="inicio" class="sec hero">
+          <img class="decor hero-flor-l rv" src="assets/img/flores-esquina.svg" alt="" />
+          <img class="decor hero-flor-r rv" src="assets/img/flores-esquina-2.svg" alt="" />
+          <div class="hero-grid">
+            <div class="hero-photo rv">
+              <div class="arch">
+                <img data-bind-src="portada" alt="Foto de los novios" />
+                <img class="arch-flor" src="assets/img/flores-guirnalda.svg" alt="" />
+              </div>
+              <img class="hero-ramita" src="assets/img/flores-ramita.svg" alt="" />
+            </div>
+            <div class="hero-text">
           <p class="eyebrow rv">Nos casamos</p>
           <h1 class="hero-names rv" data-bind="nombresHtml"></h1>
-          <svg class="sprig rv"><use href="#sprig"/></svg>
+          <img class="hero-divider rv" src="assets/img/flores-ramita.svg" alt="" />
           <p class="hero-date rv" data-bind="fechaTexto"></p>
           <div class="countdown rv" id="countdown">
             <div class="block cd"><b data-cd="d">0</b><span>días</span></div>
@@ -97,32 +121,48 @@
             <div class="block cd"><b data-cd="m">0</b><span>min</span></div>
             <div class="block cd"><b data-cd="s">0</b><span>seg</span></div>
           </div>
+            </div>
+          </div>
           <p class="scroll-hint rv">Desliza<span></span></p>
+        </section>
+
+        <!-- 01 LOS NOVIOS -->
+        <section id="novios" class="sec panel panel-paper">
+          <img class="decor deco-tl" src="assets/img/flores-ramita.svg" alt="" />
+          <img class="decor deco-br" src="assets/img/flores-esquina-2.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--moss)"><span>01</span>Los novios</h2>
+          <p class="lead rv">Dos historias que se volvieron una.</p>
+          <div class="couple" id="couple"></div>
         </section>
 
         <!-- 01 HISTORIA -->
         <section id="historia" class="sec">
-          <h2 class="block sec-title rv" style="--c:var(--wine)"><span>01</span>Nuestra historia</h2>
+          <img class="decor deco-tr" src="assets/img/flores-ramita.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--wine)"><span>02</span>Nuestra historia</h2>
           <p class="lead rv" data-bind="frase"></p>
           <div class="timeline" id="timeline"></div>
         </section>
 
         <!-- 02 FAMILIA -->
-        <section id="familia" class="sec">
-          <h2 class="block sec-title rv" style="--c:var(--amber)"><span>02</span>Nuestra familia</h2>
+        <section id="familia" class="sec panel panel-blush">
+          <img class="decor deco-tl" src="assets/img/flores-esquina.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--amber)"><span>03</span>Nuestra familia</h2>
           <div class="pet" id="pet"></div>
         </section>
 
         <!-- 03 EL GRAN DÍA -->
-        <section id="dia" class="sec">
-          <h2 class="block sec-title rv" style="--c:var(--moss)"><span>03</span>El gran día</h2>
+        <section id="dia" class="sec panel panel-sage">
+          <img class="decor deco-tr" src="assets/img/flores-ramita.svg" alt="" />
+          <img class="decor deco-bl" src="assets/img/flores-esquina-2.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--moss)"><span>04</span>El gran día</h2>
           <p class="lead rv" data-bind="fechaTexto"></p>
           <div class="events" id="events"></div>
         </section>
 
         <!-- 04 VESTIMENTA -->
-        <section id="vestimenta" class="sec">
-          <h2 class="block sec-title rv" style="--c:var(--sage)"><span>04</span>Código de vestimenta</h2>
+        <section id="vestimenta" class="sec panel panel-paper">
+          <img class="decor deco-tl" src="assets/img/flores-ramita.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--sage)"><span>05</span>Código de vestimenta</h2>
           <p class="dress-code rv" data-bind="vestimentaCodigo"></p>
           <div class="swatches rv" id="swatches"></div>
           <p class="note rv" data-bind="vestimentaNota"></p>
@@ -130,18 +170,20 @@
 
         <!-- 05 GALERÍA -->
         <section id="galeria" class="sec">
-          <h2 class="block sec-title rv" style="--c:var(--mushroom)"><span>05</span>Galería</h2>
+          <h2 class="block sec-title rv" style="--c:var(--mushroom)"><span>06</span>Galería</h2>
           <div class="gallery" id="gallery"></div>
         </section>
 
         <!-- 06 RSVP -->
-        <section id="rsvp" class="sec rsvp-sec">
-          <h2 class="block sec-title rv" style="--c:var(--wine)"><span>06</span>Confirma tu asistencia</h2>
+        <section id="rsvp" class="sec rsvp-sec panel panel-moss">
+          <img class="decor deco-tl" src="assets/img/flores-esquina.svg" alt="" />
+          <img class="decor deco-br" src="assets/img/flores-esquina-2.svg" alt="" />
+          <h2 class="block sec-title rv" style="--c:var(--wine)"><span>07</span>Confirma tu asistencia</h2>
           <p class="lead rv">Tu presencia es nuestro mejor regalo.</p>
           <p class="note rv">Por favor confirma antes del <strong data-bind="fechaLimiteRsvp"></strong>.</p>
           <button class="btn btn-primary rv" data-open-rsvp>Confirmar asistencia</button>
           <footer class="footer rv">
-            <svg class="sprig"><use href="#sprig"/></svg>
+            <img class="footer-flor" src="assets/img/flores-guirnalda.svg" alt="" />
             <p class="footer-initials" data-bind="iniciales"></p>
             <p>Con amor, gracias por ser parte de nuestra historia.</p>
           </footer>
@@ -161,7 +203,7 @@
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card">
       <button class="modal-close" data-close aria-label="Cerrar">×</button>
-      <svg class="sprig modal-sprig"><use href="#sprig"/></svg>
+      <img class="modal-flor" src="assets/img/flores-guirnalda.svg" alt="" />
 
       <!-- Paso 1: código -->
       <form class="step" data-step="codigo" id="formCodigo" novalidate>

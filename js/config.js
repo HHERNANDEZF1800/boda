@@ -11,10 +11,31 @@ window.BODA = {
   },
 
   // Fecha y hora de la ceremonia (formato ISO, hora local)
-  fecha: "2027-06-12T17:00:00",       // TODO
+  fecha: "2027-01-23T17:00:00",       // usada por la cuenta regresiva
   fechaTexto: "Sábado 23 enero de 2027",
 
   frase: "Y en medio de todo, nos encontramos.",
+
+  // Foto principal (portada y pantalla de entrada)
+  portada: "assets/img/portada.svg",
+
+  /* ---------------- Los novios ----------------
+     Un par de fotos de cada quien (puedes poner más de 2).
+     Reemplaza los .svg por tus fotos .jpg en assets/img/ */
+  perfiles: [
+    {
+      nombre: "Héctor",
+      rol: "El novio",
+      texto: "Unas líneas sobre él: lo que le apasiona, cómo es y qué lo hace sonreír. Texto de ejemplo.",
+      fotos: ["assets/img/novio-1.svg", "assets/img/novio-2.svg"],
+    },
+    {
+      nombre: "Xoch",
+      rol: "La novia",
+      texto: "Unas líneas sobre ella: lo que le apasiona, cómo es y qué la hace sonreír. Texto de ejemplo.",
+      fotos: ["assets/img/novia-1.svg", "assets/img/novia-2.svg"],
+    },
+  ],
 
   /* ---------------- Historia (capítulos) ----------------
      Cada capítulo aparece en la sección "Nuestra historia".

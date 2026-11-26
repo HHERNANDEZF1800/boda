@@ -26,6 +26,43 @@
     else el.textContent = binds[k] ?? "";
   });
   document.title = `${C.novios.el} & ${C.novios.ella} · Nuestra boda`;
+  $$("[data-bind-src]").forEach((el) => { if (C[el.dataset.bindSrc]) el.src = C[el.dataset.bindSrc]; });
+
+  /* Los novios: cada perfil con su pila de fotos */
+  const perfiles = C.perfiles || [];
+  $("#couple").innerHTML = perfiles
+    .map(
+      (p, i) => `
+    ${i === 1 ? '<div class="couple-amp rv"><span>&amp;</span></div>' : ""}
+    <article class="person rv">
+      <div class="stack" tabindex="0" role="button" aria-label="Ver otra foto de ${esc(p.nombre)}">
+        ${(p.fotos || []).map((f, k) => `<figure class="photo" style="--i:${k}"><img src="${esc(f)}" alt="${esc(p.nombre)} ${k + 1}" loading="lazy"></figure>`).join("")}
+      </div>
+      <p class="eyebrow">${esc(p.rol)}</p>
+      <h3 class="person-name">${esc(p.nombre)}</h3>
+      <p class="muted">${esc(p.texto)}</p>
+    </article>`
+    )
+    .join("");
+
+  // Rotar fotos de la pila: al tocar y automáticamente
+  function cycle(stack) {
+    const first = stack.querySelector(".photo");
+    if (!first || stack.children.length < 2 || stack.dataset.busy) return;
+    stack.dataset.busy = "1";
+    first.classList.add("out");
+    setTimeout(() => {
+      first.classList.remove("out");
+      stack.appendChild(first);
+      [...stack.children].forEach((f, k) => f.style.setProperty("--i", k));
+      delete stack.dataset.busy;
+    }, 450);
+  }
+  $$(".stack").forEach((st, i) => {
+    st.addEventListener("click", () => { cycle(st); window.SFX && SFX.tick(); });
+    st.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); cycle(st); } });
+    setTimeout(() => setInterval(() => cycle(st), 5200), i * 2600);
+  });
 
   $("#timeline").innerHTML = C.historia
     .map(
