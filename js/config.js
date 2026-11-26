@@ -6,7 +6,7 @@
 window.BODA = {
   novios: {
     el: "Héctor",
-    ella: "Nombre de ella",      // TODO: nombre de tu novia
+    ella: "Xoch",      // TODO: nombre de tu novia
     iniciales: "H & N",
   },
 
@@ -52,10 +52,10 @@ window.BODA = {
 
   // Capítulo especial para la perrita
   mascota: {
-    nombre: "Nombre de la perrita",   // TODO
+    nombre: "Clamidio",   // TODO
     titulo: "Y la familia creció",
     texto:
-      "Ella llegó a nuestras vidas para enseñarnos que el amor también se mide en patitas. Experta en siestas, cobijas y en robarse el corazón de todos. Por supuesto, estará presente en este gran día.",
+      "Él llegó a nuestras vidas para enseñarnos que el amor también se mide en patitas. Experto en siestas, cobijas y en robarse el corazón de todos. Por supuesto, estará presente en este gran día.",
     foto: "assets/img/perrita.jpg",
   },
 
