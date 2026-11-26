@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><filter id="w"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="g"><feTurbulence baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0"/></filter></defs>
+<rect width="800" height="1000" fill="#C8892A"/><g filter="url(#w)"><circle cx="331" cy="970" r="198" fill="#C8892A" opacity="0.48"/><circle cx="74" cy="840" r="297" fill="#2F3E2C" opacity="0.38"/><circle cx="59" cy="931" r="289" fill="#2F3E2C" opacity="0.26"/><circle cx="444" cy="428" r="177" fill="#2F3E2C" opacity="0.28"/><circle cx="434" cy="60" r="371" fill="#F7F0E6" opacity="0.29"/><circle cx="228" cy="645" r="320" fill="#F7F0E6" opacity="0.58"/><circle cx="590" cy="599" r="261" fill="#2F3E2C" opacity="0.59"/></g><rect width="800" height="1000" filter="url(#g)"/>
+<g fill="none" stroke="#F7F0E6" stroke-width="3" opacity=".85" transform="translate(400 470)">
+<path d="M-60-40h120a14 14 0 0 1 14 14v80a14 14 0 0 1-14 14h-120a14 14 0 0 1-14-14v-80a14 14 0 0 1 14-14z"/><circle r="30" cy="14"/><path d="M-26-40l10-18h32l10 18"/></g>
+<text x="400" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#F7F0E6" font-style="italic">Hoy</text>
+<text x="400" y="630" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" letter-spacing="6" fill="#F7F0E6" opacity=".8">FOTO DE EJEMPLO</text></svg>

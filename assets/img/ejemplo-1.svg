@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><filter id="w"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="1"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="g"><feTurbulence baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0"/></filter></defs>
+<rect width="800" height="1000" fill="#8FA58A"/><g filter="url(#w)"><circle cx="137" cy="582" r="376" fill="#2F3E2C" opacity="0.34"/><circle cx="507" cy="779" r="275" fill="#8FA58A" opacity="0.48"/><circle cx="214" cy="96" r="284" fill="#2F3E2C" opacity="0.56"/><circle cx="399" cy="443" r="315" fill="#2F3E2C" opacity="0.49"/><circle cx="272" cy="738" r="365" fill="#2F3E2C" opacity="0.46"/><circle cx="104" cy="923" r="241" fill="#2F3E2C" opacity="0.26"/><circle cx="665" cy="554" r="162" fill="#8FA58A" opacity="0.49"/></g><rect width="800" height="1000" filter="url(#g)"/>
+<g fill="none" stroke="#F7F0E6" stroke-width="3" opacity=".85" transform="translate(400 470)">
+<path d="M-60-40h120a14 14 0 0 1 14 14v80a14 14 0 0 1-14 14h-120a14 14 0 0 1-14-14v-80a14 14 0 0 1 14-14z"/><circle r="30" cy="14"/><path d="M-26-40l10-18h32l10 18"/></g>
+<text x="400" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#F7F0E6" font-style="italic">Cómo nos conocimos</text>
+<text x="400" y="630" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" letter-spacing="6" fill="#F7F0E6" opacity=".8">FOTO DE EJEMPLO</text></svg>

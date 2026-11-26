@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><filter id="w"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="2"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="g"><feTurbulence baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0"/></filter></defs>
+<rect width="800" height="1000" fill="#F2C4C0"/><g filter="url(#w)"><circle cx="57" cy="93" r="181" fill="#F2C4C0" opacity="0.54"/><circle cx="753" cy="828" r="331" fill="#F2C4C0" opacity="0.34"/><circle cx="217" cy="621" r="169" fill="#F7F0E6" opacity="0.49"/><circle cx="441" cy="653" r="260" fill="#F7F0E6" opacity="0.55"/><circle cx="521" cy="972" r="255" fill="#F7F0E6" opacity="0.58"/><circle cx="514" cy="274" r="169" fill="#7A1F2E" opacity="0.38"/><circle cx="326" cy="929" r="257" fill="#F2C4C0" opacity="0.56"/></g><rect width="800" height="1000" filter="url(#g)"/>
+<g fill="none" stroke="#F7F0E6" stroke-width="3" opacity=".85" transform="translate(400 470)">
+<path d="M-60-40h120a14 14 0 0 1 14 14v80a14 14 0 0 1-14 14h-120a14 14 0 0 1-14-14v-80a14 14 0 0 1 14-14z"/><circle r="30" cy="14"/><path d="M-26-40l10-18h32l10 18"/></g>
+<text x="400" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#F7F0E6" font-style="italic">Nuestra primera cita</text>
+<text x="400" y="630" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" letter-spacing="6" fill="#F7F0E6" opacity=".8">FOTO DE EJEMPLO</text></svg>
