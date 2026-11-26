@@ -12,7 +12,7 @@ window.BODA = {
 
   // Fecha y hora de la ceremonia (formato ISO, hora local)
   fecha: "2027-06-12T17:00:00",       // TODO
-  fechaTexto: "Sábado 12 de junio de 2027",
+  fechaTexto: "Sábado 23 enero de 2027",
 
   frase: "Y en medio de todo, nos encontramos.",
 
